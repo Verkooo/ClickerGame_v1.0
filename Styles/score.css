@@ -1,0 +1,47 @@
+.div-score-inside
+{
+  font-size: 40px;
+  font-weight: bold;
+  height: 100px;
+  width: 60%;
+  display: flex;
+  background-image: linear-gradient(to right, #02c6c3, #205ed0);
+  box-shadow: 1px 1px 50px 1px rgba(107, 165, 255, .32);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s;
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.div-score-inside::before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: all 650ms;
+}
+.div-score-inside:hover::before
+{
+  left: 100%;
+}
+.score, .cps
+{
+  margin: 0;
+  padding: 0;
+}
+.score
+{
+  margin-top: -20px;
+  margin-bottom: 5px;
+}
+.cps
+{
+  font-size: 20px;
+}

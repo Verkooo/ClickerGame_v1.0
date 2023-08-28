@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Styles/clicker.png" class="favicon">
+  <link rel="stylesheet" href="Styles/main.css">
+  <link rel="stylesheet" href="Styles/div-right-inside.css">
+  <link rel="stylesheet" href="Styles/div-header-inside.css">
+  <link rel="stylesheet" href="Styles/shop.css">
+  <link rel="stylesheet" href="Styles/skills.css">
+  <link rel="stylesheet" href="Styles/div-left-inside.css">
+  <link rel="stylesheet" href="Styles/score.css">
+  <link rel="stylesheet" href="Styles/clicker.css">
+  <link rel="stylesheet" href="Styles/options.css">
+  <link rel="stylesheet" href="Styles/info.css">
+  <link rel="stylesheet" href="Styles/upgrade.css">
+  <title>Kradżewski Clicker</title>
+</head>
+<body>
+  <div class="body1">
+    <div class="div-header">
+      <div class="div-header-inside">
+        <h1 class="unselectable">Kradżewski Clicker</h1>
+      </div>
+    </div>
+    <div class="div-left">
+      <div class="div-score">
+        <div class="div-score-inside">
+          <p class="score unselectable">0</p>
+          <p class="cps unselectable">0 cps</p>
+        </div>
+      </div>
+      <div class="div-clicker clicker unselectable" onclick="addToScore(clickingPower)"></div>
+    </div>
+    <div class="div-right">
+      <div class="div-shop">
+        <div class="div-shop-header">
+          <h1 class="unselectable">Shop</h1>
+        </div>
+        <div class="div-shop-inside unselectable">
+          <div class="shop-row row1">
+            <img src="Images/item1.png" alt="Papier Toaletowy" class="item-image">
+            <p class="item-name item1">Papier Toaletowy</p>
+            <button class="shop-button-price price1">CENA: 10</button>
+            <button class="shop-button click-effect" onclick="item1Buy()">BUY</button>
+          </div>
+          <div class="shop-row row2 display-row-2">
+            <img src="Images/item2.png" alt="Piłka" class="item-image">
+            <p class="item-name item2">Piłka</p>
+            <button class="shop-button-price price2">CENA: 100</button>
+            <button class="shop-button click-effect" onclick="item2Buy()">BUY</button>
+          </div>
+          <div class="shop-row row25 display-row-25">
+            <img src="Images/item25.png" alt="Papier Toaletowy" class="item-image">
+            <p class="item-name item25">But</p>
+            <button class="shop-button-price price25">CENA: 250</button>
+            <button class="shop-button click-effect" onclick="item25Buy()">BUY</button>
+          </div>
+          <div class="shop-row row3 display-row-3">
+            <img src="Images/item3.png" alt="Pajączek" class="item-image">
+            <p class="item-name item3">Pajączek</p>
+            <button class="shop-button-price price3">CENA: 500</button>
+            <button class="shop-button click-effect" onclick="item3Buy()">BUY</button>
+          </div>
+          <div class="shop-row row4 display-row-4">
+            <img src="Images/item4.png" alt="Spaghetti" class="item-image img4">
+            <p class="item-name item4">Spaghetti</p>
+            <button class="shop-button-price price4">CENA: 1000</button>
+            <button class="shop-button click-effect" onclick="item4Buy()">BUY</button>
+          </div>
+          <div class="shop-row row5 display-row-5">
+            <img src="Images/item5.png" alt="Taki zwykły hotdog z keczapem" class="item-image img5">
+            <p class="item-name item5">Taki zwykły hotdog z keczapem</p>
+            <button class="shop-button-price price5">CENA: 5000</button>
+            <button class="shop-button click-effect" onclick="item5Buy()">BUY</button>
+          </div>
+          <div class="shop-row row6 display-row-6">
+            <img src="Images/item6.png" alt="Coca Cola" class="item-image img6">
+            <p class="item-name item6">Coca Cola</p>
+            <button class="shop-button-price price6">CENA: 15000</button>
+            <button class="shop-button click-effect" onclick="item6Buy()">BUY</button>
+          </div>
+        </div>
+      </div>
+      <div class="div-skills unselectable">
+        <div class="div-skills-header">
+          <h1 class="unselectable">Skills</h1>
+        </div>
+        <div class="div-skills-inside">
+          <div class="skills-row sRow1">
+            <img src="Images/skill1.png" alt="Lay's Strong" class="item-image skill-img1">
+            <p class="skill-name skill1">Lay's Strong</p>
+            <button class="shop-button-price sPrice1 skill-price">CENA: 5000</button>
+            <button class="shop-button click-effect skill-btn sBtn1" onclick="
+            if(isBuy1 === false)
+            {
+              skill1Buy();
+            }
+            else if(isBuy1 === true)
+            {
+              skill1Use();
+            }">BUY</button>
+          </div>
+          <div class="skills-row sRow2 display-skills">
+            <img src="Images/skill2.png" alt="Brytan" class="item-image skill-img2">
+            <p class="skill-name skill2">Brytan</p>
+            <button class="shop-button-price sPrice2 skill-price">CENA: 25000</button>
+            <button class="shop-button click-effect skill-btn sBtn2" onclick="
+            if(isBuy2 === false)
+            {
+              skill2Buy();
+            }
+            else if(isBuy2 === true)
+            {
+              skill2Use();
+            }">BUY</button>
+          </div>
+          <div class="skills-row sRow3 display-skills">
+            <img src="Images/skill3.png" alt="War Thunder Rage" class="item-image skill-img3">
+            <p class="skill-name skill3">War Thunder Rage</p>
+            <button class="shop-button-price sPrice3 skill-price">CENA: 100000</button>
+            <button class="shop-button click-effect skill-btn sBtn3" onclick="
+            if(isBuy3 === false)
+            {
+              skill3Buy();
+            }
+            else if(isBuy3 === true)
+            {
+              skill3Use();
+            }">BUY</button>
+          </div>
+          <div class="skills-row sRow4 display-skills ">
+            <img src="Images/skill4.png" alt="Euro Truck" class="item-image skill-img4">
+            <p class="skill-name skill4">Euro Truck</p>
+            <button class="shop-button-price sPrice4 skill-price">CENA: 200000</button>
+            <button class="shop-button click-effect skill-btn sBtn4" onclick="
+            if(isBuy4 === false)
+            {
+              skill4Buy();
+            }
+            else if(isBuy4 === true)
+            {
+              skill4Use();
+            }">BUY</button>
+          </div>
+        </div>
+      </div>
+      <div class="div-options">
+        <button class="save-game-btn click-effect unselectable kak1" onclick="saveGame()"><h1>Save Game</h1></button>
+        <button class="reset-game-btn click-effect unselectable kak2" onclick="optionsOpen()"><h1>Options</h1></button>
+      </div>
+      <div class="div-upgrade unselectable">
+        <div class="div-shop-header">
+          <h1 class="unselectable">Upgrades</h1>
+        </div>
+        <div class="upgrades-row uRow1">
+          <img src="Images/upgrade1.png" alt="DoubleClick" class="item-image upgrade-img1">
+          <p class="upgrade-name upgrade1">DoubleClick</p>
+          <button class="shop-button-price uPrice">CENA: 2500</button>
+          <button class="shop-button click-effect uBtn" onclick="upgrade1Buy()">BUY</button>
+        </div>
+        <div class="upgrades-row uRow15 upgrade-display">
+          <img src="Images/upgrade15.png" alt="Złoty Papier Toaletowy" class="item-image upgrade-img15">
+          <p class="upgrade-name upgrade15">Złoty Papier</p>
+          <button class="shop-button-price uPrice">CENA: 5000</button>
+          <button class="shop-button click-effect uBtn" onclick="upgrade15Buy()">BUY</button>
+        </div>
+        <div class="upgrades-row uRow3 upgrade-display">
+          <img src="Images/upgrade3.png" alt="Pompka do piłki" class="item-image upgrade-img3">
+          <p class="upgrade-name upgrade3">Pompka</p>
+          <button class="shop-button-price uPrice bob2">CENA: 10000</button>
+          <button class="shop-button click-effect uBtn" onclick="upgrade3Buy()">BUY</button>
+        </div>
+        <div class="upgrades-row uRow4 upgrade-display">
+          <img src="Images/upgrade4.png" alt="Pasta do butów" class="item-image upgrade-img4">
+          <p class="upgrade-name upgrade4">Pasta do butów</p>
+          <button class="shop-button-price uPrice bob3">CENA: 20000</button>
+          <button class="shop-button click-effect uBtn" onclick="upgrade4Buy()">BUY</button>
+        </div>
+        <div class="upgrades-row uRow5 upgrade-display">
+          <img src="Images/upgrade5.png" alt="Mucha" class="item-image upgrade-img5">
+          <p class="upgrade-name upgrade5">Mucha</p>
+          <button class="shop-button-price uPrice bob4">CENA: 35000</button>
+          <button class="shop-button click-effect uBtn" onclick="upgrade5Buy()">BUY</button>
+        </div>
+        <div class="upgrades-row uRow6 upgrade-display">
+          <img src="Images/upgrade6.png" alt="Parmezan" class="item-image upgrade-img6">
+          <p class="upgrade-name upgrade6">Parmezan</p>
+          <button class="shop-button-price uPrice bob5">CENA: 50000</button>
+          <button class="shop-button click-effect uBtn" onclick="upgrade6Buy()">BUY</button>
+        </div>
+        <div class="upgrades-row uRow7 upgrade-display">
+          <img src="Images/upgrade7.png" alt="Keczap" class="item-image upgrade-img7">
+          <p class="upgrade-name upgrade7">Keczap</p>
+          <button class="shop-button-price uPrice bob6">CENA: 75000</button>
+          <button class="shop-button click-effect uBtn" onclick="upgrade7Buy()">BUY</button>
+        </div>
+        <div class="upgrades-row uRow2 upgrade-display">
+          <img src="Images/upgrade2.png" alt="DoubleCPS" class="item-image upgrade-img2">
+          <p class="upgrade-name upgrade2">DoubleCPS</p>
+          <button class="shop-button-price uPrice bob">CENA: 100000</button>
+          <button class="shop-button click-effect uBtn" onclick="upgrade2Buy()">BUY</button>
+        </div>
+        <div class="upgrades-row uRow8 upgrade-display">
+          <img src="Images/upgrade8.png" alt="Cukier" class="item-image upgrade-img8">
+          <p class="upgrade-name upgrade8">Cukier</p>
+          <button class="shop-button-price uPrice bob7">CENA: 125000</button>
+          <button class="shop-button click-effect uBtn" onclick="upgrade8Buy()">BUY</button>
+        </div>
+      </div>
+    </div>
+    <div class="div-footer"></div>
+  </div>
+  <div class="div-info off">
+    <div class="div-info-inside">
+        <div class="div-skins unselectable">
+          <button class="skin-btn click-effect skin-btn1 unselectable" onclick="skin1Change()"><img src="Styles/clicker.png" alt="skin1" class="item-image skin-img1 unselectable"></button>
+          <button class="skin-btn click-effect skin-btn2 unselectable" onclick="skin2Change()"><img src="Images/skin2.png" alt="skin2" class="item-image skin-img2 unselectable"></button>
+          <button class="skin-btn click-effect skin-btn3 unselectable" onclick="skin3Change()"><img src="Images/skin3.png" alt="skin3" class="item-image skin-img3 unselectable"></button>
+          <button class="skin-btn click-effect skin-btn4 unselectable" onclick="skin4Change()"><img src="Images/skin4.png" alt="skin4" class="item-image skin-img4 unselectable"></button>
+          <button class="skin-btn click-effect skin-btn5 unselectable" onclick="skin5Change()"><img src="Images/skin5.png" alt="skin5" class="item-image skin-img5 unselectable"></button>
+          <button class="skin-btn click-effect skin-btn6 unselectable" onclick="skin6Change()"><img src="Images/skin6.png" alt="skin6" class="item-image skin-img6 unselectable"></button>
+          <button class="skin-btn click-effect skin-btn7 unselectable" onclick="skin7Change()"><img src="Images/skin7.png" alt="skin7" class="item-image skin-img7 unselectable"></button>
+          <button class="skin-btn click-effect skin-btn8 unselectable" onclick="skin8Change()"><img src="Images/skin8.png" alt="skin8" class="item-image skin-img8 unselectable"></button>
+          <button class="skin-btn click-effect skin-btn9 unselectable" onclick="skin9Change()"><img src="Images/skin9.png" alt="skin9" class="item-image skin-img9 unselectable"></button>
+          <button class="skin-btn click-effect skin-btn10 unselectable" onclick="skin10Change()"><img src="Images/skin10.png" alt="skin10" class="item-image skin-img10 unselectable"></button>
+        </div>
+        <div class="info unselectable">
+          <h1 class="inf reset-game-btn">Info</h1>
+          <div class="main">
+            <h2>Instrukcja Obsługi :)</h2>
+            <p class="info-p"><h3>Jak zdobywać punkty ?</h3><h4>Klikasz lewym przyciskiem myszy w głowe po lewej stronie ekranu.</h4></p>
+            <p class="info-p"><h3>Jak kupować przedmioty, skille, ulepszenia ?</h3><h4>Jeśli masz wystarczająco punktów klikasz "BUY".</h4></p>
+            <p class="info-p"><h3>Jak używać skilli ?</h3><h4>Po zakupieniu skilla klikasz "Use". <span class="kok">(Podczas gdy skill jest aktywny nie da się kupować przedmiotów i ulepszeń)</span></h4></p>
+            <p class="info-p"><h3>Jak odblokowywać skiny ?</h3><h4>Skiny do Kradżewskiego odblokowują się gdy masz wystarczająco All-time score. <span class="kok">(Możesz to sprawdzić w statystykach po prawej stronie)</span></h4></p>
+            <p class="info-p"><h3>Co dają kupione rzeczy ?</h3><h4>Opisy wszystkich przedmiotów znajdują się poniżej.</h4></p>
+          </div>
+          <div class="builds">
+            <h2>Shop items</h2>
+            <p class="info-p"><h3>Papier Toaletowy </h3><h4>Po zakupie masz 50% szans, że dostaniesz +1 od każdego kliknięcia.</h4></p>
+            <p class="info-p"><h3>Piłka </h3><h4>Po zakupie dostaniesz +1 od każdego kliknięcia.</h4></p>
+            <p class="info-p"><h3>But </h3><h4>Po zakupie dostaniesz +2 od każdego kliknięcia.</h4></p>
+            <p class="info-p"><h3>Pajączek </h3><h4>Po zakupie dostaniesz +1 do cps.</h4></p>
+            <p class="info-p"><h3>Spaghetti </h3><h4>Po zakupie dostaniesz +2 do cps.</h4></p>
+            <p class="info-p"><h3>Taki zwykły hotdog z keczapem</h3><h4>Po zakupie dostaniesz +5 do cps.</h4></p>
+            <p class="info-p"><h3>Coca Cola</h3><h4>Po zakupie dostaniesz +2 do każdego kliknięcia i +3 do cps.</h4></p>
+          </div>
+          <div class="skills">
+            <h2>Skills</h2>
+            <p class="info-p"><h3>Lay's Strong</h3><h4>Przez 30 sekund każde kliknięcie jest podwojone.</h4></p>
+            <p class="info-p"><h3>Brytan</h3><h4>Przez minutę podwaja cps.</h4></p>
+            <p class="info-p"><h3>War Thunder Rage</h3><h4>Przez 15 sekund każde kliknięcie jest razy 4.</h4></p>
+            <p class="info-p"><h3>Euro Truck</h3><h4>Przez 30 sekund cps są razy 3.</h4></p>
+          </div>
+          <div class="upgrades">
+            <h2>Upgrades</h2>
+            <p class="info-p"><h3>DoubleClick</h3><h4>Podwaja kliknięcia na stałe.</h4></p>
+            <p class="info-p"><h3>Złoty Papier</h3><h4>Po zakupie Papier Toaletowy ma gwarantowane +1 i 50% szans na +2 od każdego kliknięcia.</h4></p>
+            <p class="info-p"><h3>DoubleCPS</h3><h4>Podwaja cps jakie daje każdy przedmiot.</h4></p>
+            <p class="info-p"><h3>Pompka</h3><h4>Pompuje Piłke przez co podwaja jej efektywność.</h4></p>
+            <p class="info-p"><h3>Pasta do butów</h3><h4>Pastowane buty dają +3 od każdego kliknięcia.</h4></p>
+            <p class="info-p"><h3>Mucha</h3><h4>Najedzony pajączek jest dwa razy bardziej efektywny.</h4></p>
+            <p class="info-p"><h3>Parmezan</h3><h4>Spaghetti daje dwa razy więcej do cps.</h4></p>
+            <p class="info-p"><h3>Keczap</h3><h4>Więcej keczapu = lepiej. Podwaja efektywność hotdoga.</h4></p>
+            <p class="info-p"><h3>Cukier</h3><h4>Cola większego kopa daje i jest 2 razy bardziej efektywna.</h4></p>
+          </div>
+          <div class="skins">
+            <h2>Skins</h2>
+            <p class="info-p"><h3>Skin 1</h3><h4>Deafultowy skin.</h4></p>
+            <p class="info-p"><h3>Skin 2</h3><h4>Odblokowuje się gdy All-time score jest większy niż 5,000.</h4></p>
+            <p class="info-p"><h3>Skin 3</h3><h4>Odblokowuje się gdy All-time score jest większy niż 10,000.</h4></p>
+            <p class="info-p"><h3>Skin 4</h3><h4>Odblokowuje się gdy All-time score jest większy niż 50,000.</h4></p>
+            <p class="info-p"><h3>Skin 5</h3><h4>Odblokowuje się gdy All-time score jest większy niż 100,000.</h4></p>
+            <p class="info-p"><h3>Skin 6</h3><h4>Odblokowuje się gdy All-time score jest większy niż 500,000.</h4></p>
+            <p class="info-p"><h3>Skin 7</h3><h4>Odblokowuje się gdy All-time score jest większy niż 1,000,000.</h4></p>
+            <p class="info-p"><h3>Skin 8</h3><h4>Odblokowuje się gdy All-time score jest większy niż 10,000,000.</h4></p>
+            <p class="info-p"><h3>Skin 9</h3><h4>Odblokowuje się gdy All-time score jest większy niż 50,000,000.</h4></p>
+            <p class="info-p"><h3>Skin 10</h3><h4>Odblokowuje się gdy All-time score jest większy niż 100,000,000.</h4></p>
+          </div>
+          <div class="inne">
+            <h2>Obsada</h2>
+            <p class="info-p"><h3>Autor</h3><h4>Verko</h4></p>
+            <p class="info-p"><h3>Twarz Projektu</h3><h4>Kradżewski</h4></p>
+            <p class="info-p"><h3>Pomysłodawcy</h3><h4>Dyzio, Gyulio, Eflokers, Feziak</h4></p>
+            <p class="info-p"><h3>Testerzy</h3><h4>Fawu, Feziak, Ortaz, Eflokers</h4></p>
+          </div>
+        </div>
+        <div class="stats unselectable">
+          <h1 class="inf reset-game-btn st">Stats</h1>
+          <div>
+            <p><h2>Score: <span class="just-score">0</span></h2></p>
+            <p><h2>All-time score: <span class="all-time-score">0</span></h2></p>
+            <p><h2>Clicks:  <span class="all-time-clicks">0</span></h2></p>
+            <p><h2>Score via clicks: <span class="score-via-clicks">0</span></h2></p>
+            <p><h2>Score via cps: <span class="score-via-cps">0</span></h2></p>
+            <p><h2>Items own:  <span class="items-own">0</span></h2></p>
+            <p><h2>Upgrades own:  <span class="upgrades-own">0</span></h2></p>
+            <p><h2>Skills own:  <span class="skills-own">0</span></h2></p>
+            <p><h2>Skills used:  <span class="skills-used">0</span></h2></p>
+            <p><h2>Skins own:  <span class="skins-own">1</span>/10</h2></p>
+          </div>
+        </div>
+        <button onclick="reset()" class="reset-game-btn click-effect reset unselectable"><h1>Reset Game</h1></button>
+        <button onclick="optionsExit()" class="click-effect reset-game-btn exit-btn unselectable"><h1>X</h1></button>
+    </div>
+  </div>
+  <div class="div-reset off">
+    <div class="div-div-reset unselectable">
+      <h2>Czy napewno chcesz zresetować grę ?</h2>
+      <button onclick="resetGame()" class="reset-game-btn click-effect tak"><h1>Tak</h1></button>
+      <button onclick="resetExit()" class="reset-game-btn click-effect"><h1>Nie</h1></button>
+    </div>
+  </div>
+  <script src="Scripts/main.js"></script>
+  <script src="Scripts/shop.js"></script>
+  <script src="Scripts/save.js"></script>
+  <script src="Scripts/showNumber.js"></script>
+  <script src="Scripts/options.js"></script>
+  <script src="Scripts/reset.js"></script>
+  <script src="Scripts/skills.js"></script>
+  <script src="Scripts/saveSkills.js"></script>
+  <script src="Scripts/skins.js"></script>
+  <script src="Scripts/upgrades.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+.div-info
+{
+  position: absolute;
+  background: rgb(25,25,25);
+  background: radial-gradient(circle, rgba(18,18,18,1) 0%, rgba(50,50,50,1) 100%);
+  width: 75%;
+  height: 75%;
+  margin-left: 12%;
+  margin-top: -1%;
+  border-radius: 25px;
+}
+.div-info-inside
+{
+  background: rgb(47,45,43);
+  background: radial-gradient(circle, rgb(70, 70, 70) 0%, rgba(112,105,96,1) 100%);
+  width: 96%;
+  height: 92%;
+  margin-left: 2%;
+  margin-top: 2%;
+  border-radius: 25px;
+  display: flex;
+}
+.off
+{
+  display: none;
+}
+.exit-btn
+{
+  top: 81.1%;
+  right: 39px;
+  position: absolute;
+  height: 72px;
+  width: 72px;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.info, .stats
+{
+  background-color: gray;
+  border-radius: 15px;
+  width: 45%;
+  height: 80%;
+}
+.reset
+{
+  position: absolute;
+  top: 82.5%;
+  width: 42.5%;
+  left: 48%;
+  height: 10%;
+
+}
+.info
+{
+  margin: 1.5%;
+  overflow-y: auto;
+}
+.stats
+{
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  margin-right: 1.5%;
+  width: 51%;
+  overflow-y: auto;
+}
+.inf
+{
+  margin-left: 30%;
+  width: 40%;
+}
+.info h3, .stats h3
+{
+  margin-left: 4%;
+}
+.info h2, .stats h2
+{
+  margin-left: 2%;
+  font-size: 25px;
+}
+.info h4, .stats h4
+{
+  margin-left: 6%;
+}
+.div-reset
+{
+  position: absolute;
+  background: rgb(25,25,25);
+  background: radial-gradient(circle, rgba(18,18,18,1) 0%, rgba(50,50,50,1) 100%);
+  width: 600px;
+  height: 300px;
+  top: 350px;
+  right: 650px;
+  border-radius: 25px;
+}
+.div-div-reset
+{
+  background: rgb(47,45,43);
+  background: radial-gradient(circle, rgb(70, 70, 70) 0%, rgba(112,105,96,1) 100%);
+  border-radius: 25px;
+  height: 88%;
+  width: 94%;
+  margin: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tak
+{
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+.div-div-reset h2
+{
+  font-size: 28px;
+}
+.skin-btn
+{
+  background-color: transparent;
+  border: none;
+  width: 55px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 30px;
+   margin-right: 5px;
+}
+.div-skins
+{
+  display: flex;
+  height: 10%;
+  width: 42.5%;
+  position: absolute;
+  top: 83%;
+  left: 55px;
+  border-radius: 30px;
+}
+.kok
+{
+  font-weight: bolder;
+}

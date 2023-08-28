@@ -1,0 +1,21 @@
+.div-clicker
+{
+  background-image: url("clicker.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all .2s ease-in-out;
+  height: 520px;
+  width: 370px;
+  margin-left: 25%;
+  margin-top: 7%;
+  cursor: pointer;
+  position: relative;
+}
+.div-clicker:hover
+{
+  transform: scale(1.10);
+}
+.div-clicker:active
+{
+  transform: scale(0.99);
+}

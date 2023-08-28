@@ -1,0 +1,107 @@
+.div-shop-header
+{
+  margin-left: 20%;
+  margin-top: 10px;
+  height: 60px;
+  width: 60%;
+  display: flex;
+  background-image: linear-gradient(to right, #02c6c3, #205ed0);
+  box-shadow: 1px 1px 50px 1px rgba(107, 165, 255, .32);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.div-shop-header::before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: all 650ms;
+}
+.div-shop-header:hover::before
+{
+  left: 100%;
+}
+.div-shop-inside
+{
+  display: flex;
+  flex-direction: column;
+}
+.shop-row, .skills-row
+{
+  display: flex;
+  background-color: gray;
+  align-items: center;
+  padding: 3px;
+  margin: 10px 23px;
+  width: 90%;
+  font-size: 25px;
+  font-weight: 500;
+  border-radius: 15px;
+  height: 50px;
+}
+.shop-button
+{
+
+  border: none;
+  height: 30px;
+  width: 100px;
+  margin-right: 15px;
+  background-image: linear-gradient(to right, #02c6c3, #205ed0);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  font-weight: bold;
+}
+.shop-button::before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: all 650ms;
+}
+.shop-button:hover::before
+{
+  left: 100%;
+}
+.item-name
+{
+  width: 75%;
+  margin-left: 5px;
+}
+.item-image
+{
+  height: 50px;
+  width: 50px;
+}
+.shop-button-price
+{
+  border: none;
+  height: 30px;
+  width: 150px;
+  font-weight: bold;
+  background-color: transparent;
+}
+.display-row-2, .display-row-3, .display-row-4, .display-row-25, .display-row-5, .display-row-6
+{
+  display: none;
+}
+.img4
+{
+  height: 40px;
+  width: 50px;
+}

@@ -1,0 +1,76 @@
+.upgrades-row
+{
+  display: flex;
+  background-color: gray;
+  align-items: center;
+  padding: 3px;
+  margin: 10px 23px;
+  width: 90%;
+  font-size: 25px;
+  font-weight: 500;
+  border-radius: 15px;
+  height: 50px;
+}
+.uPrice
+{
+  margin-left: 20%;
+  margin-right: 0;
+}
+.upgrade-img1
+{
+  scale: 80%;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+.upgrade-img2, .upgrade-img15
+{
+  scale: 85%;
+}
+.upgrade-display
+{
+  display: none;
+}
+.upgrade2
+{
+  margin-right: 1%;
+}
+.upgrade1
+{
+  margin-right: -5px;
+}
+.bob
+{
+  margin-right: -3px;
+}
+.bob2
+{
+  margin-left: 157px;
+}
+.bob3
+{
+  margin-left: 83px;
+  margin-right: -6px;
+}
+.bob4
+{
+  margin-left: 177px;
+  margin-right: -3px;
+}
+.bob5
+{
+  margin-left: 137px;
+}
+.bob6
+{
+  margin-left: 167px;
+}
+.upgrade-img7
+{
+  scale: 70%;
+  height: 130%;
+}
+.bob7
+{
+  margin-left: 180px;
+  margin-right: -3px;
+}
